@@ -3,6 +3,7 @@ use random_string::generate;
 const LICENSE_CHARS: &str = "L23456789ABCDEFGHJKMNPQRSTUVWXYZ";
 fn main() {
     generate_license();
+    std::io::stdin().read_line(&mut String::new()).unwrap();
 }
 
 fn generate_license(){
@@ -18,6 +19,7 @@ fn generate_license(){
     license.insert(6, '-');
     license.insert(13, '-');
     license.insert(20, '-');
-    println!("License for you: {}", license);
+    println!("这是你的激活码: {}", license);
+    print!("按回车键退出...");
 }
 
